@@ -290,22 +290,26 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-2.5">
               <Link
                 href="/lien-he"
-                className="flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold border transition-all hover:bg-slate-50"
+                className="flex items-center justify-center gap-1.5 px-3 xl:px-4 py-2.5 rounded-full text-sm font-semibold border transition-all hover:bg-slate-50"
                 style={{ borderColor: "#D7DFEC", color: "#0F2A56" }}
+                aria-label="Tư Vấn"
+                title="Tư Vấn"
               >
                 <Phone size={14} />
-                Tư Vấn
+                <span className="hidden xl:inline">Tư Vấn</span>
               </Link>
               <Link
                 href="/thiet-bi"
-                className="flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-semibold text-white transition-all hover:-translate-y-px"
+                className="flex items-center justify-center gap-1.5 px-3 xl:px-4 py-2.5 rounded-full text-sm font-semibold text-white transition-all hover:-translate-y-px"
                 style={{
                   background: "linear-gradient(135deg, #0F2A56 0%, #1E458A 100%)",
                   boxShadow: "0 16px 28px -20px rgba(15,42,86,0.7)",
                 }}
+                aria-label="Xem Thiết Bị"
+                title="Xem Thiết Bị"
               >
                 <ShoppingCart size={14} />
-                Xem Thiết Bị
+                <span className="hidden xl:inline">Xem Thiết Bị</span>
               </Link>
             </div>
 
