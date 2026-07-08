@@ -36,20 +36,17 @@ const slides = [
 
 export default function HeroSlider() {
   return (
-    <section
-      style={{ height: "min(92vh, 860px)", minHeight: 560 }}
-      className="section-shell"
-    >
+    <section className="section-shell relative min-h-[min(100svh,480px)] sm:min-h-[420px] sm:h-[min(88svh,860px)]">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 6000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         navigation
         loop
-        className="hero-swiper h-full"
+        className="hero-swiper h-full min-h-[min(100svh,480px)] sm:min-h-0"
       >
         {slides.map((slide, i) => (
-          <SwiperSlide key={i} className="relative overflow-hidden">
+          <SwiperSlide key={i} className="relative overflow-hidden !h-auto min-h-[min(100svh,480px)] sm:min-h-0 sm:!h-full">
             {/* Background */}
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -72,9 +69,9 @@ export default function HeroSlider() {
             />
 
             {/* Content */}
-            <div className="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center">
+            <div className="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center py-10 sm:py-0">
               <div
-                className="max-w-[760px] rounded-[28px] px-5 py-6 sm:px-7 sm:py-7"
+                className="max-w-[760px] rounded-2xl sm:rounded-[28px] px-4 py-5 sm:px-7 sm:py-7"
                 style={{
                   background: "linear-gradient(180deg, rgba(255,255,255,0.26), rgba(255,255,255,0.14))",
                   border: "1px solid rgba(255,255,255,0.24)",
@@ -98,8 +95,8 @@ export default function HeroSlider() {
 
                 {/* Headline */}
                 <h1
-                  className="font-black leading-[1.03] mb-4 tracking-tight"
-                  style={{ fontSize: "clamp(1.9rem, 4vw, 4.35rem)", color: "white" }}
+                  className="font-black leading-[1.08] mb-4 tracking-tight"
+                  style={{ fontSize: "clamp(1.65rem, 6.5vw, 4.35rem)", color: "white" }}
                 >
                   {slide.title.map((line, li) => (
                     <span key={li} className="block">
@@ -127,10 +124,10 @@ export default function HeroSlider() {
                 </div>
 
                 {/* CTAs */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3">
                   <Link
                     href={slide.cta1.href}
-                    className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-black text-white transition-all duration-200 hover:-translate-y-px"
+                    className="inline-flex items-center justify-center gap-2.5 px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl text-sm font-black text-white transition-all duration-200 hover:-translate-y-px"
                     style={{ background: "linear-gradient(135deg, #F28D35, #F6B457)", boxShadow: "0 12px 28px rgba(242,141,53,0.4)" }}
                   >
                     {slide.cta1.label}
@@ -138,7 +135,7 @@ export default function HeroSlider() {
                   </Link>
                   <Link
                     href={slide.cta2.href}
-                    className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-bold text-white transition-all duration-200 hover:-translate-y-px"
+                    className="inline-flex items-center justify-center gap-2.5 px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl text-sm font-bold text-white transition-all duration-200 hover:-translate-y-px"
                     style={{
                       background: "rgba(255,255,255,0.1)",
                       border: "1px solid rgba(255,255,255,0.24)",

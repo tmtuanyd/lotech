@@ -51,6 +51,18 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setMobileExpanded(null);
+  }, [pathname]);
+
   const navLinks = [
     { label: "Trang Chủ", href: "/" },
     { label: "Về Chúng Tôi", href: "/ve-chung-toi" },
@@ -128,7 +140,10 @@ export default function Header() {
                     <div
                       className="mega-menu absolute top-full left-1/2 -translate-x-1/2 pt-3"
                       style={{
-                        width: link.mega === "solutions" ? "680px" : "520px",
+                        width:
+                          link.mega === "solutions"
+                            ? "min(680px, calc(100vw - 2rem))"
+                            : "min(520px, calc(100vw - 2rem))",
                       }}
                     >
                       <div
@@ -319,7 +334,7 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
             />
             <motion.div
-              className="fixed top-0 left-0 bottom-0 w-80 z-50 bg-white shadow-2xl lg:hidden overflow-y-auto"
+              className="fixed top-0 left-0 bottom-0 w-[min(20rem,100vw)] z-50 bg-white shadow-2xl lg:hidden overflow-y-auto"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}

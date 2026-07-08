@@ -20,7 +20,7 @@ export default function ProjectsSection() {
       : PROJECTS.filter((p) => p.category === active || p.tags.includes(active));
 
   return (
-    <section ref={ref} className="py-24" style={{ background: "#F4F7FB" }}>
+    <section ref={ref} className="py-14 sm:py-20 md:py-24" style={{ background: "#F4F7FB" }}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
           <SectionTitle

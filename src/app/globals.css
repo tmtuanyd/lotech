@@ -89,6 +89,30 @@ a {
   display: none !important;
 }
 
+.hero-swiper .swiper-pagination {
+  left: 1rem !important;
+  width: auto !important;
+  right: auto !important;
+  text-align: left !important;
+}
+
+@media (min-width: 640px) {
+  .hero-swiper .swiper-pagination {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+    text-align: center !important;
+  }
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* ─── Partners marquee ───────────────────────── */
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 35s linear infinite; }

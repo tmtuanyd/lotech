@@ -151,8 +151,11 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
-        <div className="max-w-7xl mx-auto px-4 h-12 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
-          <span>© 2026 {COMPANY.fullName}. All rights reserved.</span>
+        <div className="max-w-7xl mx-auto px-4 min-h-12 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
+          <span>
+            <span className="sm:hidden">© 2026 LOTEC Việt Nam</span>
+            <span className="hidden sm:inline">© 2026 {COMPANY.fullName}. All rights reserved.</span>
+          </span>
           <div className="flex items-center gap-4">
             <Link href="/chinh-sach-bao-mat" className="inline-flex items-center gap-1 hover:text-white/70 transition-colors">
               Chính sách bảo mật

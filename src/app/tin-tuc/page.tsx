@@ -21,7 +21,7 @@ export default function NewsPage() {
         description="Cập nhật mới nhất từ LOTEC Việt Nam"
       />
 
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-5 mb-8">
             <NewsCard

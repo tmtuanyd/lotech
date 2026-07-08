@@ -40,9 +40,9 @@ export default function AboutSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-24 bg-white overflow-hidden">
+    <section ref={ref} className="py-14 sm:py-20 md:py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* ── Image side ── */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -75,7 +75,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="absolute -bottom-5 -right-5 rounded-xl overflow-hidden shadow-xl border-4 border-white"
+              className="absolute -bottom-5 -right-5 rounded-xl overflow-hidden shadow-xl border-4 border-white hidden sm:block"
               style={{ width: 130, height: 130 }}
             >
               <img
@@ -90,7 +90,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.6, duration: 0.4 }}
-              className="absolute top-4 left-4 flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-lg text-white text-xs font-bold"
+              className="absolute top-4 left-4 flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-lg text-white text-[10px] sm:text-xs font-bold max-w-[70%] truncate"
               style={{ background: "#E87722" }}
             >
               <ShieldCheck size={14} />
@@ -111,7 +111,7 @@ export default function AboutSection() {
             />
 
             {/* Values */}
-            <div className="grid grid-cols-2 gap-3 mt-8 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8 mb-8">
               {values.map((v, i) => {
                 const Icon = v.icon;
                 return (
@@ -120,7 +120,7 @@ export default function AboutSection() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.3 + i * 0.09, duration: 0.5 }}
-                    className="flex items-start gap-3 p-4 rounded-xl border"
+                    className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl border"
                     style={{ borderColor: "#DCE4F0", background: v.bg }}
                   >
                     <div

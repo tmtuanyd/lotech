@@ -49,10 +49,10 @@ export default function PageHero({ breadcrumb, title, description, image }: Page
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-18 md:py-24">
-        <div className="max-w-3xl rounded-[28px] border px-6 py-7 md:px-8 md:py-9" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.14)", backdropFilter: "blur(8px)" }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-24">
+        <div className="max-w-3xl rounded-2xl sm:rounded-[28px] border px-4 py-5 sm:px-6 sm:py-7 md:px-8 md:py-9" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.14)", backdropFilter: "blur(8px)" }}>
         <nav
-          className="mb-5 inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border px-3 py-2 text-xs"
+          className="mb-4 sm:mb-5 inline-flex max-w-full items-center gap-1.5 sm:gap-2 rounded-full border px-2.5 sm:px-3 py-1.5 sm:py-2 text-[11px] sm:text-xs overflow-x-auto whitespace-nowrap scrollbar-none"
           style={{
             background: "rgba(255,255,255,0.08)",
             borderColor: "rgba(255,255,255,0.14)",
@@ -60,16 +60,16 @@ export default function PageHero({ breadcrumb, title, description, image }: Page
           }}
         >
           {breadcrumb.map((crumb, i) => (
-            <span key={i} className="flex items-center gap-2">
+            <span key={i} className="flex items-center gap-1.5 sm:gap-2">
               {i === 0 && <House size={12} className="text-white/70" />}
               {i > 0 && <ChevronRight size={12} className="text-white/35" />}
               {crumb.href ? (
-                <Link href={crumb.href} className="rounded-full px-2 py-1 text-white/68 transition-colors hover:bg-white/8 hover:text-white">
+                <Link href={crumb.href} className="rounded-full px-1.5 sm:px-2 py-1 text-white/68 transition-colors hover:bg-white/8 hover:text-white">
                   {crumb.label}
                 </Link>
               ) : (
                 <span
-                  className="rounded-full px-2.5 py-1 font-semibold text-white"
+                  className="rounded-full px-2 sm:px-2.5 py-1 font-semibold text-white max-w-[10rem] truncate inline-block align-bottom"
                   style={{ background: "rgba(255,255,255,0.12)" }}
                 >
                   {crumb.label}
@@ -78,11 +78,11 @@ export default function PageHero({ breadcrumb, title, description, image }: Page
             </span>
           ))}
         </nav>
-        <h1 className="mb-4 text-4xl font-black leading-tight tracking-tight text-white md:text-5xl">
+        <h1 className="mb-3 sm:mb-4 text-[1.75rem] sm:text-4xl font-black leading-tight tracking-tight text-white md:text-5xl">
           {title}
         </h1>
         {description && (
-          <p className="max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
+          <p className="max-w-2xl text-sm sm:text-base leading-relaxed text-white/70 md:text-lg">
             {description}
           </p>
         )}

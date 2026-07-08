@@ -132,30 +132,30 @@ export default async function ProductCategoryPage({ params }: CategoryPageProps)
             </div>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[260px_minmax(0,1fr)]">
+          <div className="grid gap-6 xl:grid-cols-[240px_minmax(0,1fr)]">
             <aside className="modern-card p-5 h-fit">
               <div className="text-sm font-bold uppercase tracking-[0.18em] mb-4" style={{ color: "#6B7C93" }}>
                 Danh mục
               </div>
-              <div className="space-y-2">
+              <div className="flex gap-2 overflow-x-auto pb-1 xl:flex-col xl:overflow-visible xl:space-y-2 xl:pb-0">
                 {PRODUCT_CATEGORIES.map((item) => (
                   <Link
                     key={item.slug}
                     href={`/thiet-bi/${item.slug}`}
-                    className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold transition-colors"
+                    className="flex items-center justify-between gap-3 rounded-2xl px-4 py-3 text-sm font-semibold transition-colors whitespace-nowrap flex-shrink-0 xl:w-full"
                     style={{
                       background: item.slug === category ? "#EEF4FB" : "transparent",
                       color: item.slug === category ? "#0F2A56" : "#51627E",
                     }}
                   >
                     <span>{item.label}</span>
-                    <ArrowRight size={14} />
+                    <ArrowRight size={14} className="hidden xl:block" />
                   </Link>
                 ))}
               </div>
             </aside>
 
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 sm:gap-4">
               {products.map((product) => (
                 <ProductCard
                   key={product.id}

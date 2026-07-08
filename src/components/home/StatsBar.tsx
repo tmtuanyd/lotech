@@ -79,13 +79,13 @@ export default function StatsBar() {
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "rgba(232,119,34,0.6)" }} />
 
       <div className="max-w-7xl mx-auto px-4 py-14">
-        <div className="grid grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8">
           {stats.map((stat, i) => {
             const Icon = stat.icon;
             return (
               <div
                 key={i}
-                className="relative flex flex-col items-center text-center px-6 py-2"
+                className="relative flex flex-col items-center text-center px-3 sm:px-6 py-3 sm:py-2"
               >
                 {/* Vertical divider except last */}
                 {i < stats.length - 1 && (
@@ -102,13 +102,13 @@ export default function StatsBar() {
                   <Icon size={18} style={{ color: "#F5A623" }} />
                 </div>
                 {/* Number */}
-                <div className="text-4xl md:text-5xl font-black text-white leading-none mb-1 tabular-nums">
+                <div className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-none mb-1 tabular-nums">
                   <Counter value={stat.value} suffix={stat.suffix} started={inView} />
                 </div>
                 {/* Label */}
                 <div className="font-bold text-sm text-white mt-1">{stat.label}</div>
                 {/* Sub */}
-                <div className="text-xs mt-0.5 leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
+                <div className="text-[11px] sm:text-xs mt-0.5 leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>
                   {stat.sub}
                 </div>
               </div>

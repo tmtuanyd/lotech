@@ -45,20 +45,20 @@ export default function ProjectCard({
         >
           {String(index).padStart(2, "0")}
         </div>
-        <div className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium text-white"
+        <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium text-white max-w-[75%] truncate"
           style={{ background: "rgba(8,20,47,0.44)", backdropFilter: "blur(6px)" }}>
-          <MapPin size={11} style={{ color: "#F28D35" }} />
-          {location}
+          <MapPin size={11} className="flex-shrink-0" style={{ color: "#F28D35" }} />
+          <span className="truncate">{location}</span>
         </div>
       </div>
 
       {/* Info */}
-      <div className="p-5">
-        <div className="flex flex-wrap gap-1.5 mb-3">
-          {tags.map((tag) => (
+      <div className="p-4 sm:p-5">
+        <div className="flex flex-wrap gap-1.5 mb-2.5 sm:mb-3">
+          {tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em]"
+              className="rounded-full px-2 py-0.5 sm:px-2.5 sm:py-1 text-[10px] font-bold uppercase tracking-[0.12em]"
               style={{ background: "#EEF4FB", color: "#0F2A56" }}
             >
               {tag}
@@ -66,7 +66,7 @@ export default function ProjectCard({
           ))}
         </div>
         <h3
-          className="mb-3 line-clamp-2 text-base font-bold leading-snug transition-colors group-hover:text-[#0F2A56]"
+          className="mb-2.5 sm:mb-3 line-clamp-2 text-[15px] sm:text-base font-bold leading-snug transition-colors group-hover:text-[#0F2A56]"
           style={{ color: "#13233D" }}
         >
           {title}

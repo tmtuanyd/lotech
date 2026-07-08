@@ -61,9 +61,9 @@ export default function AboutPage() {
       />
 
       {/* Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-20 bg-white">
         <Reveal className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="relative overflow-hidden rounded-[30px] modern-card p-2">
               <div className="relative overflow-hidden rounded-[24px]" style={{ aspectRatio: "4/3" }}>
               <img
@@ -115,11 +115,11 @@ export default function AboutPage() {
       {/* Stats */}
       <section style={{ background: "linear-gradient(135deg, #08142F 0%, #0F2A56 60%, #1B3F7A 100%)" }}>
         <Reveal className="max-w-7xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
             {stats.map((s) => (
               <div key={s.label}>
-                <div className="text-4xl font-black text-white mb-1">{s.value}</div>
-                <div className="text-sm text-white/60">{s.label}</div>
+                <div className="text-2xl sm:text-4xl font-black text-white mb-1">{s.value}</div>
+                <div className="text-xs sm:text-sm text-white/60">{s.label}</div>
               </div>
             ))}
           </div>
@@ -127,7 +127,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core values */}
-      <section className="py-20" style={{ background: "#F6F8FC" }}>
+      <section className="py-14 sm:py-20" style={{ background: "#F6F8FC" }}>
         <Reveal className="max-w-7xl mx-auto px-4">
           <SectionTitle
             label="Giá trị cốt lõi"
@@ -163,9 +163,9 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications & Partners */}
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-20 bg-white">
         <Reveal className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-14">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14">
             <div>
               <SectionTitle label="Chứng nhận" title="Tiêu Chuẩn & Chứng Chỉ" />
               <div className="flex flex-wrap gap-3 mt-6">

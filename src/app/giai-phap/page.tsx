@@ -22,7 +22,7 @@ export default function SolutionsPage() {
         image="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80"
       />
 
-      <section className="py-20" style={{ background: "#F6F8FC" }}>
+      <section className="py-14 sm:py-20" style={{ background: "#F6F8FC" }}>
         <Reveal className="max-w-7xl mx-auto px-4">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <SectionTitle

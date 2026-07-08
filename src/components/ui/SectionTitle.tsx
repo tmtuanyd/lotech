@@ -24,7 +24,7 @@ export default function SectionTitle({
         </div>
       )}
       <h2
-        className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tight"
+        className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight tracking-tight"
         style={{ color: dark ? "white" : "var(--navy)" }}
       >
         {title}

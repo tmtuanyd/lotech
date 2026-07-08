@@ -59,7 +59,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-10">
             {/* Content */}

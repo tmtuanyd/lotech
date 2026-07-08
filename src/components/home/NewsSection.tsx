@@ -13,7 +13,7 @@ export default function NewsSection() {
   const rest = NEWS.filter((n) => !n.featured).slice(0, 2);
 
   return (
-    <section ref={ref} className="py-24 bg-white">
+    <section ref={ref} className="py-14 sm:py-20 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
           <SectionTitle label="Tin tức & Kiến thức" title="Tin Tức Mới Nhất" />

@@ -101,11 +101,11 @@ export default function ContactForm() {
         <label className="block text-sm font-semibold mb-2" style={{ color: "#0D2B5E" }}>
           Bạn cần tư vấn về?
         </label>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {inquiryTypes.map((t) => (
             <label
               key={t}
-              className="flex items-center gap-2 cursor-pointer p-3 rounded-xl border transition-all select-none"
+              className="flex items-center gap-2 cursor-pointer p-3 rounded-xl border transition-all select-none min-h-[3rem]"
               style={{
                 borderColor: form.type === t ? "#E87722" : "#DCE4F0",
                 background: form.type === t ? "#FFF3E8" : "white",

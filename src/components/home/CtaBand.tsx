@@ -4,8 +4,7 @@ import { COMPANY } from "@/data";
 
 export default function CtaBand() {
   return (
-    <section
-      className="relative py-24 overflow-hidden"
+    <section className="relative py-14 sm:py-20 md:py-24 overflow-hidden"
       style={{ background: "linear-gradient(135deg, #0B1E45 0%, #0D2B5E 60%, #1A4490 100%)" }}
     >
       {/* Geometric decoration */}
@@ -41,24 +40,25 @@ export default function CtaBand() {
         </div>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-black text-white mb-4 leading-[1.1] tracking-tight">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white mb-4 leading-[1.1] tracking-tight">
           Bắt Đầu Dự Án Của Bạn
           <br />
           <span style={{ color: "#F5A623" }}>Ngay Hôm Nay</span>
         </h2>
-        <p className="text-base max-w-xl mx-auto mb-10" style={{ color: "rgba(255,255,255,0.55)" }}>
+        <p className="text-sm sm:text-base max-w-xl mx-auto mb-8 sm:mb-10" style={{ color: "rgba(255,255,255,0.55)" }}>
           Đội ngũ kỹ sư LOTEC sẵn sàng tư vấn miễn phí, khảo sát thực tế và đưa ra giải pháp tối ưu cho công trình của bạn
         </p>
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10 sm:mb-12">
           <Link
             href={`tel:${COMPANY.hotline1.replace(/\s/g, "")}`}
-            className="pulse-glow flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
+            className="pulse-glow flex items-center gap-2.5 px-5 sm:px-6 py-3.5 rounded-xl font-bold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 w-full sm:w-auto justify-center text-sm"
             style={{ background: "#E87722", boxShadow: "0 4px 14px rgba(232,119,34,0.35)" }}
           >
             <Phone size={16} />
-            Gọi Ngay: {COMPANY.hotline1}
+            <span className="sm:hidden">Gọi ngay</span>
+            <span className="hidden sm:inline">Gọi Ngay: {COMPANY.hotline1}</span>
           </Link>
           <Link
             href={`mailto:${COMPANY.email1}`}

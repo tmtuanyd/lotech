@@ -42,8 +42,8 @@ export default function ProductsSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.05 });
 
   return (
-    <section ref={ref} className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section ref={ref} className="py-14 sm:py-20 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* ── Header ── */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-6">
@@ -71,7 +71,7 @@ export default function ProductsSection() {
         </div>
 
         {/* ── Category strip ── */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-10 sm:mb-12">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.label}
@@ -81,7 +81,7 @@ export default function ProductsSection() {
             >
               <Link
                 href={cat.href}
-                className="group flex items-center gap-3 p-4 rounded-xl border-2 bg-white transition-all duration-200 hover:border-[#0D2B5E] hover:-translate-y-0.5 hover:shadow-md"
+                className="group flex items-center gap-3 p-3.5 sm:p-4 rounded-xl border-2 bg-white transition-all duration-200 hover:border-[#0D2B5E] hover:-translate-y-0.5 hover:shadow-md"
                 style={{ borderColor: "#E2E8F0" }}
               >
                 <div
@@ -95,10 +95,10 @@ export default function ProductsSection() {
                   />
                 </div>
                 <div className="min-w-0">
-                  <div className="font-bold text-xs leading-tight" style={{ color: "#0F172A" }}>
+                  <div className="font-bold text-xs leading-tight line-clamp-2" style={{ color: "#0F172A" }}>
                     {cat.label}
                   </div>
-                  <div className="text-[10px] mt-0.5" style={{ color: "#94A3B8" }}>
+                  <div className="text-[10px] mt-0.5 line-clamp-1" style={{ color: "#94A3B8" }}>
                     {cat.desc}
                   </div>
                 </div>
@@ -108,7 +108,7 @@ export default function ProductsSection() {
         </div>
 
         {/* ── Products grid ── */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 mb-10 sm:mb-12">
           {PRODUCTS.map((p, i) => (
             <motion.div
               key={p.id}
@@ -131,7 +131,7 @@ export default function ProductsSection() {
 
         {/* ── Inquiry strip ── */}
         <div
-          className="flex flex-col sm:flex-row items-center gap-4 px-6 py-5 rounded-2xl"
+          className="flex flex-col sm:flex-row items-center gap-4 px-4 sm:px-6 py-5 rounded-2xl"
           style={{ background: "#0D2B5E" }}
         >
           <div className="flex-1">

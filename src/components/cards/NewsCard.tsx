@@ -23,7 +23,7 @@ export default function NewsCard({
   if (featured) {
     return (
       <Link href={href} className="group block md:col-span-2">
-        <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "16/8" }}>
+        <div className="relative overflow-hidden rounded-2xl aspect-[16/10] sm:aspect-[16/8]">
           <img
             src={image}
             alt={title}
@@ -36,7 +36,7 @@ export default function NewsCard({
                 "linear-gradient(to top, rgba(13,43,94,0.96) 30%, rgba(13,43,94,0.2) 100%)",
             }}
           />
-          <div className="absolute bottom-0 left-0 right-0 p-6">
+          <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
             <div className="flex items-center gap-3 mb-3">
               <span
                 className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase text-white"
@@ -46,10 +46,10 @@ export default function NewsCard({
               </span>
               <span className="text-white/50 text-xs">{date}</span>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-2 line-clamp-2 group-hover:text-orange-400 transition-colors">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 line-clamp-2 group-hover:text-orange-400 transition-colors">
               {title}
             </h3>
-            <p className="text-sm line-clamp-2 mb-3" style={{ color: "rgba(255,255,255,0.65)" }}>
+            <p className="text-sm line-clamp-2 mb-3 hidden sm:block" style={{ color: "rgba(255,255,255,0.65)" }}>
               {excerpt}
             </p>
             <span className="inline-flex items-center gap-1.5 text-sm font-bold" style={{ color: "#F5A623" }}>

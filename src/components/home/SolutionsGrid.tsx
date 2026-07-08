@@ -18,8 +18,8 @@ export default function SolutionsGrid() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.06 });
 
   return (
-    <section ref={ref} style={{ background: "#0B1E45" }} className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
+    <section ref={ref} style={{ background: "#0B1E45" }} className="py-14 sm:py-20 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-6">
           <div>
@@ -62,7 +62,7 @@ export default function SolutionsGrid() {
               >
                 <Link
                   href={`/giai-phap/${sol.slug}`}
-                  className="group relative flex flex-col p-8 h-full overflow-hidden transition-colors duration-300"
+                  className="group relative flex flex-col p-5 sm:p-8 h-full overflow-hidden transition-colors duration-300"
                   style={{ background: "#0D2B5E" }}
                   onMouseEnter={(e) => (e.currentTarget.style.background = "#1A3570")}
                   onMouseLeave={(e) => (e.currentTarget.style.background = "#0D2B5E")}
@@ -77,7 +77,7 @@ export default function SolutionsGrid() {
 
                   {/* Icon */}
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300"
+                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4 sm:mb-6 transition-colors duration-300"
                     style={{ background: "rgba(232,119,34,0.12)", border: "1px solid rgba(232,119,34,0.2)" }}
                   >
                     <Icon

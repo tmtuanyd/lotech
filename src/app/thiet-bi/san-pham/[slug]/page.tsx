@@ -119,7 +119,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                 )}
               </div>
 
-              <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-4" style={{ color: "#0F2A56" }}>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight mb-4 break-words" style={{ color: "#0F2A56" }}>
                 {product.name}
               </h1>
 
@@ -127,7 +127,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                 {product.shortDesc}
               </p>
 
-              <div className="grid grid-cols-2 gap-3 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                 {[
                   {
                     icon: product.inStock ? PackageCheck : Truck,
@@ -150,10 +150,10 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                     value: categoryMeta?.shortLabel ?? product.category,
                   },
                 ].map((item) => (
-                  <div key={item.label} className="modern-card p-4">
+                  <div key={item.label} className="modern-card p-3.5 sm:p-4">
                     <div className="flex items-center gap-2 mb-1" style={{ color: "#0F2A56" }}>
                       <item.icon size={16} />
-                      <span className="text-xs font-bold uppercase tracking-[0.16em]">
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.12em] sm:tracking-[0.16em]">
                         {item.label}
                       </span>
                     </div>
@@ -164,8 +164,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                 ))}
               </div>
 
-              <div className="modern-card p-6 mb-6">
-                <div className="flex items-end justify-between gap-4 mb-5">
+              <div className="modern-card p-4 sm:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-5">
                   <div>
                     <div className="text-xs font-bold uppercase tracking-[0.18em] mb-2" style={{ color: "#6B7C93" }}>
                       Báo giá
@@ -175,7 +175,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                     </div>
                   </div>
                   <div
-                    className="rounded-2xl px-4 py-3 text-sm font-semibold"
+                    className="rounded-2xl px-4 py-3 text-sm font-semibold w-fit"
                     style={{ background: "#F7FAFE", color: "#51627E" }}
                   >
                     Hỗ trợ tư vấn B2B
@@ -202,7 +202,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                 </div>
               </div>
 
-              <div className="modern-card p-6">
+              <div className="modern-card p-4 sm:p-6">
                 <div className="text-lg font-bold mb-4" style={{ color: "#0F2A56" }}>
                   Điểm nổi bật
                 </div>
@@ -229,8 +229,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
       <section className="py-14" style={{ background: "#F6F8FC" }}>
         <div className="max-w-7xl mx-auto px-4 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="modern-card p-6">
-            <h2 className="text-2xl font-extrabold mb-6" style={{ color: "#0F2A56" }}>
+          <div className="modern-card p-4 sm:p-6">
+            <h2 className="text-xl sm:text-2xl font-extrabold mb-6" style={{ color: "#0F2A56" }}>
               Thông số kỹ thuật
             </h2>
             <div className="divide-y" style={{ borderColor: "#E6EDF6" }}>
@@ -247,8 +247,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             </div>
           </div>
 
-          <div className="modern-card p-6">
-            <h2 className="text-2xl font-extrabold mb-6" style={{ color: "#0F2A56" }}>
+          <div className="modern-card p-4 sm:p-6">
+            <h2 className="text-xl sm:text-2xl font-extrabold mb-6" style={{ color: "#0F2A56" }}>
               Tài liệu mẫu
             </h2>
             <div className="space-y-3">
@@ -256,18 +256,18 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                 <Link
                   key={doc.name}
                   href={doc.url}
-                  className="flex items-center justify-between rounded-2xl border px-4 py-4 transition-colors hover:bg-[#F8FBFE]"
+                  className="flex items-center justify-between gap-3 rounded-2xl border px-3 sm:px-4 py-3 sm:py-4 transition-colors hover:bg-[#F8FBFE]"
                   style={{ borderColor: "#E6EDF6" }}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
                     <div
-                      className="flex h-11 w-11 items-center justify-center rounded-2xl"
+                      className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl"
                       style={{ background: "#EEF4FB", color: "#0F2A56" }}
                     >
                       <FileBadge2 size={18} />
                     </div>
-                    <div>
-                      <div className="text-sm font-semibold" style={{ color: "#0F2A56" }}>
+                    <div className="min-w-0">
+                      <div className="text-sm font-semibold truncate" style={{ color: "#0F2A56" }}>
                         {doc.name}
                       </div>
                       <div className="text-xs" style={{ color: "#6B7C93" }}>
@@ -275,7 +275,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                       </div>
                     </div>
                   </div>
-                  <ArrowRight size={16} style={{ color: "#F28D35" }} />
+                  <ArrowRight size={16} className="flex-shrink-0" style={{ color: "#F28D35" }} />
                 </Link>
               ))}
             </div>
@@ -286,7 +286,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       {relatedProducts.length > 0 && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-end justify-between gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8">
               <div>
                 <div className="section-label">Sản phẩm liên quan</div>
                 <h2 className="text-2xl font-extrabold tracking-tight" style={{ color: "#0F2A56" }}>
@@ -303,7 +303,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                 </Link>
               )}
             </div>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
               {relatedProducts.map((item) => (
                 <ProductCard
                   key={item.id}

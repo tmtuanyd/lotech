@@ -46,7 +46,7 @@ export default function ContactPage() {
       />
 
       {/* Quick contact cards */}
-      <section className="py-16" style={{ background: "#F6F8FC" }}>
+      <section className="py-14 sm:py-16" style={{ background: "#F6F8FC" }}>
         <Reveal className="max-w-7xl mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <SectionTitle
@@ -60,7 +60,7 @@ export default function ContactPage() {
             {contactCards.map((card) => (
               <div
                 key={card.title}
-                className="modern-card flex min-h-[248px] flex-col items-center rounded-[26px] p-6 text-center"
+                className="modern-card flex min-h-0 sm:min-h-[248px] flex-col items-center rounded-[22px] sm:rounded-[26px] p-5 sm:p-6 text-center"
                 style={{ borderColor: "#DCE4F0" }}
               >
                 <div
@@ -70,11 +70,11 @@ export default function ContactPage() {
                   <card.icon size={24} style={{ color: card.color }} />
                 </div>
 
-                <h3 className="min-h-[32px] text-lg font-bold leading-tight" style={{ color: "#0F2A56" }}>
+                <h3 className="min-h-0 sm:min-h-[32px] text-lg font-bold leading-tight" style={{ color: "#0F2A56" }}>
                   {card.title}
                 </h3>
 
-                <div className="mt-3 flex min-h-[62px] flex-col items-center justify-center gap-1">
+                <div className="mt-3 flex min-h-0 sm:min-h-[62px] flex-col items-center justify-center gap-1">
                   {card.lines.map((l) => (
                     <p key={l} className="text-sm leading-relaxed" style={{ color: "#6B7C93" }}>
                       {l}
@@ -99,9 +99,9 @@ export default function ContactPage() {
       </section>
 
       {/* Form + Map */}
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-20 bg-white">
         <Reveal className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-5 gap-10">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-10">
             {/* Form */}
             <div className="lg:col-span-3">
               <SectionTitle
@@ -109,7 +109,7 @@ export default function ContactPage() {
                 title="Nhận tư vấn và báo giá theo nhu cầu"
                 description="Điền thông tin cơ bản để đội ngũ LOTEC phân loại nhu cầu và liên hệ lại nhanh hơn."
               />
-              <div className="modern-card mt-8 p-6 md:p-7">
+              <div className="modern-card mt-8 p-4 sm:p-6 md:p-7">
                 <ContactForm />
               </div>
             </div>
@@ -117,8 +117,8 @@ export default function ContactPage() {
             {/* Info */}
             <div className="lg:col-span-2 space-y-6">
               <div
-                className="modern-card overflow-hidden"
-                style={{ borderColor: "#DCE4F0", height: "260px", background: "#F4F7FB" }}
+                className="modern-card overflow-hidden h-[200px] sm:h-[260px]"
+                style={{ borderColor: "#DCE4F0", background: "#F4F7FB" }}
               >
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.641!2d105.886!3d21.055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDAzJzE4LjAiTiAxMDXCsDUzJzA5LjYiRQ!5e0!3m2!1svi!2svn!4v1720000000000!5m2!1svi!2svn"
