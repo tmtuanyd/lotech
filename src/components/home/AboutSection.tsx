@@ -40,7 +40,14 @@ export default function AboutSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section ref={ref} className="py-14 sm:py-20 md:py-24 bg-white overflow-hidden">
+    <section
+      ref={ref}
+      className="py-14 sm:py-20 md:py-24 overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(circle at 10% 10%, rgba(34,211,238,0.08), transparent 30%), linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* ── Image side ── */}
@@ -52,7 +59,7 @@ export default function AboutSection() {
           >
             {/* Main photo */}
             <div
-              className="relative rounded-2xl overflow-hidden shadow-2xl"
+              className="relative rounded-[26px] overflow-hidden shadow-2xl"
               style={{ aspectRatio: "4/3" }}
             >
               <img
@@ -109,6 +116,31 @@ export default function AboutSection() {
               title="Đơn vị tiên phong về Năng lượng & Tự động hóa"
               description="Với đội ngũ kỹ sư dày dặn kinh nghiệm, LOTEC đã hoàn thành hơn 130 công trình trạm biến áp 110kV–220kV trên 20+ tỉnh thành với tỷ lệ 100% đúng tiến độ."
             />
+
+            <div className="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
+              {[
+                { value: "130+", text: "Dự án" },
+                { value: "20+", text: "Tỉnh thành" },
+                { value: "24/7", text: "Hỗ trợ" },
+              ].map((item) => (
+                <div
+                  key={item.text}
+                  className="rounded-xl px-3 py-2.5 border"
+                  style={{
+                    borderColor: "#DCE4F0",
+                    background:
+                      "linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,251,255,0.95))",
+                  }}
+                >
+                  <div className="text-sm sm:text-base font-extrabold" style={{ color: "#0D2B5E" }}>
+                    {item.value}
+                  </div>
+                  <div className="text-[11px] sm:text-xs" style={{ color: "#7B8FA8" }}>
+                    {item.text}
+                  </div>
+                </div>
+              ))}
+            </div>
 
             {/* Values */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8 mb-8">

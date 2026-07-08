@@ -20,7 +20,14 @@ export default function ProjectsSection() {
       : PROJECTS.filter((p) => p.category === active || p.tags.includes(active));
 
   return (
-    <section ref={ref} className="py-14 sm:py-20 md:py-24" style={{ background: "#F4F7FB" }}>
+    <section
+      ref={ref}
+      className="py-14 sm:py-20 md:py-24"
+      style={{
+        background:
+          "radial-gradient(circle at 90% 5%, rgba(34,211,238,0.08), transparent 28%), linear-gradient(180deg, #F6F9FE 0%, #EFF5FC 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
           <SectionTitle
@@ -43,7 +50,7 @@ export default function ProjectsSection() {
             <button
               key={f}
               onClick={() => setActive(f)}
-              className="px-4 py-2 rounded-xl text-sm font-bold transition-all duration-200"
+              className="px-4 py-2 rounded-xl text-sm font-bold transition-all duration-200 hover:-translate-y-px"
               style={{
                 background: active === f ? "#0D2B5E" : "white",
                 color: active === f ? "white" : "#0D2B5E",

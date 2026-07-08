@@ -67,16 +67,23 @@ export default function HeroSlider() {
                   "radial-gradient(circle at 80% 18%, rgba(34,211,238,0.18), transparent 34%)",
               }}
             />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(8,20,47,0.06) 0%, rgba(8,20,47,0.25) 100%)",
+              }}
+            />
 
             {/* Content */}
             <div className="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center py-10 sm:py-0">
               <div
-                className="max-w-[760px] rounded-2xl sm:rounded-[28px] px-4 py-5 sm:px-7 sm:py-7"
+                className="max-w-[800px] rounded-2xl sm:rounded-[32px] px-4 py-5 sm:px-8 sm:py-8"
                 style={{
-                  background: "linear-gradient(180deg, rgba(255,255,255,0.26), rgba(255,255,255,0.14))",
-                  border: "1px solid rgba(255,255,255,0.24)",
-                  backdropFilter: "blur(8px)",
-                  boxShadow: "0 24px 48px -28px rgba(8,20,47,0.45)",
+                  background: "linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0.12))",
+                  border: "1px solid rgba(255,255,255,0.28)",
+                  backdropFilter: "blur(11px)",
+                  boxShadow: "0 34px 60px -30px rgba(8,20,47,0.55)",
                 }}
               >
                 {/* Eyebrow */}
@@ -145,6 +152,7 @@ export default function HeroSlider() {
                     {slide.cta2.label}
                   </Link>
                 </div>
+
               </div>
             </div>
           </SwiperSlide>

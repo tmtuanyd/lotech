@@ -18,7 +18,14 @@ export default function SolutionsGrid() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.06 });
 
   return (
-    <section ref={ref} style={{ background: "#0B1E45" }} className="py-14 sm:py-20 md:py-24">
+    <section
+      ref={ref}
+      style={{
+        background:
+          "radial-gradient(circle at 12% 12%, rgba(34,211,238,0.14), transparent 30%), linear-gradient(135deg, #0B1E45 0%, #0D2B5E 55%, #123875 100%)",
+      }}
+      className="py-14 sm:py-20 md:py-24"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-6">
@@ -40,39 +47,38 @@ export default function SolutionsGrid() {
           </div>
           <Link
             href="/giai-phap"
-            className="inline-flex items-center gap-2 text-sm font-bold transition-all hover:gap-3 flex-shrink-0"
-            style={{ color: "rgba(255,255,255,0.5)" }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#F5A623")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
+            className="inline-flex items-center gap-2 text-sm font-bold transition-all hover:gap-3 flex-shrink-0 text-white/60 hover:text-[#F5A623]"
           >
             Xem tất cả <ArrowRight size={15} />
           </Link>
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ background: "rgba(255,255,255,0.07)", borderRadius: 16, overflow: "hidden" }}>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {SOLUTIONS.map((sol, i) => {
             const Icon = iconMap[sol.id] ?? Cctv;
             return (
               <motion.div
                 key={sol.id}
+                className="h-full"
                 initial={{ opacity: 0 }}
                 animate={inView ? { opacity: 1 } : {}}
                 transition={{ delay: i * 0.07, duration: 0.5 }}
               >
                 <Link
                   href={`/giai-phap/${sol.slug}`}
-                  className="group relative flex flex-col p-5 sm:p-8 h-full overflow-hidden transition-colors duration-300"
-                  style={{ background: "#0D2B5E" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = "#1A3570")}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = "#0D2B5E")}
+                  className="group relative flex flex-col p-5 sm:p-8 h-full overflow-hidden transition-all duration-300 rounded-[24px] hover:-translate-y-1"
+                  style={{
+                    background:
+                      "linear-gradient(160deg, rgba(13,43,94,0.96), rgba(14,55,116,0.95))",
+                    boxShadow:
+                      "inset 0 0 0 1px rgba(255,255,255,0.12), 0 22px 38px -28px rgba(5,13,30,0.8)",
+                  }}
                 >
                   {/* Subtle image bg */}
                   <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-8 transition-opacity duration-500 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${sol.image})`, opacity: 0 }}
-                    onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.06")}
-                    onMouseLeave={(e) => (e.currentTarget.style.opacity = "0")}
+                    className="absolute inset-0 transition-opacity duration-500 bg-cover bg-center opacity-0 group-hover:opacity-[0.08]"
+                    style={{ backgroundImage: `url(${sol.image})` }}
                   />
 
                   {/* Icon */}

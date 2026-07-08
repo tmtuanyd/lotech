@@ -78,22 +78,23 @@ export default function StatsBar() {
       {/* Subtle top line */}
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "rgba(232,119,34,0.6)" }} />
 
-      <div className="max-w-7xl mx-auto px-4 py-14">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8">
+      <div className="max-w-7xl mx-auto px-4 py-14 sm:py-16">
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 rounded-[28px] p-3 sm:p-4 border"
+          style={{
+            background: "rgba(255,255,255,0.03)",
+            borderColor: "rgba(255,255,255,0.1)",
+            backdropFilter: "blur(6px)",
+          }}
+        >
           {stats.map((stat, i) => {
             const Icon = stat.icon;
             return (
               <div
                 key={i}
-                className="relative flex flex-col items-center text-center px-3 sm:px-6 py-3 sm:py-2"
+                className="relative flex flex-col items-center text-center px-3 sm:px-6 py-4 sm:py-5 rounded-2xl"
+                style={{ background: "rgba(255,255,255,0.02)" }}
               >
-                {/* Vertical divider except last */}
-                {i < stats.length - 1 && (
-                  <div
-                    className="absolute right-0 top-1/2 -translate-y-1/2 h-16 w-px hidden md:block"
-                    style={{ background: "rgba(255,255,255,0.1)" }}
-                  />
-                )}
                 {/* Icon */}
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 flex-shrink-0"

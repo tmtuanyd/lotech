@@ -42,6 +42,10 @@ export default function PageHero({ breadcrumb, title, description, image }: Page
         style={{ background: "radial-gradient(circle, rgba(242,141,53,0.22), transparent 70%)" }}
       />
       <div
+        className="absolute -bottom-28 -left-20 h-80 w-80 rounded-full opacity-35"
+        style={{ background: "radial-gradient(circle, rgba(34,211,238,0.22), transparent 68%)" }}
+      />
+      <div
         className="soft-orb absolute inset-0"
         style={{
           background: "radial-gradient(circle at 82% 18%, rgba(34,211,238,0.14), transparent 28%)",
@@ -50,7 +54,7 @@ export default function PageHero({ breadcrumb, title, description, image }: Page
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-24">
-        <div className="max-w-3xl rounded-2xl sm:rounded-[28px] border px-4 py-5 sm:px-6 sm:py-7 md:px-8 md:py-9" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.14)", backdropFilter: "blur(8px)" }}>
+        <div className="max-w-3xl rounded-2xl sm:rounded-[28px] border px-4 py-5 sm:px-6 sm:py-7 md:px-8 md:py-9" style={{ background: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.18)", backdropFilter: "blur(10px)", boxShadow: "0 26px 52px -30px rgba(8,20,47,0.65)" }}>
         <nav
           className="mb-4 sm:mb-5 inline-flex max-w-full items-center gap-1.5 sm:gap-2 rounded-full border px-2.5 sm:px-3 py-1.5 sm:py-2 text-[11px] sm:text-xs overflow-x-auto whitespace-nowrap scrollbar-none"
           style={{
@@ -86,6 +90,28 @@ export default function PageHero({ breadcrumb, title, description, image }: Page
             {description}
           </p>
         )}
+        <div className="mt-5 flex flex-wrap gap-2">
+          <span
+            className="rounded-full px-3 py-1.5 text-[11px] sm:text-xs font-semibold"
+            style={{
+              color: "rgba(255,255,255,0.9)",
+              background: "rgba(255,255,255,0.12)",
+              border: "1px solid rgba(255,255,255,0.2)",
+            }}
+          >
+            Chính hãng 100%
+          </span>
+          <span
+            className="rounded-full px-3 py-1.5 text-[11px] sm:text-xs font-semibold"
+            style={{
+              color: "rgba(255,255,255,0.9)",
+              background: "rgba(255,255,255,0.12)",
+              border: "1px solid rgba(255,255,255,0.2)",
+            }}
+          >
+            Tư vấn kỹ thuật 24/7
+          </span>
+        </div>
         </div>
       </div>
     </section>

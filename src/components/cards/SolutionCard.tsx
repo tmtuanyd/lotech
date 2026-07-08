@@ -1,23 +1,42 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Cctv,
+  Thermometer,
+  BrickWallShield,
+  Cpu,
+  BatteryCharging,
+  Sun,
+} from "lucide-react";
 
 interface SolutionCardProps {
   title: string;
   description: string;
-  icon: string;
+  iconKey: string;
   tags: string[];
   href: string;
   image: string;
 }
 
+const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+  "camera-ai": Cctv,
+  "giam-sat-nhiet": Thermometer,
+  "hang-rao": BrickWallShield,
+  "scada-plc": Cpu,
+  "giam-sat-dc": BatteryCharging,
+  solar: Sun,
+};
+
 export default function SolutionCard({
   title,
   description,
-  icon,
+  iconKey,
   tags,
   href,
   image,
 }: SolutionCardProps) {
+  const Icon = iconMap[iconKey] ?? Cctv;
+
   return (
     <Link
       href={href}
@@ -41,10 +60,10 @@ export default function SolutionCard({
       <div className="relative z-10 flex h-full flex-col justify-between p-4 sm:p-6">
         {/* Icon */}
         <div
-          className="flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-2xl text-xl sm:text-2xl"
+          className="flex h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-2xl"
           style={{ background: "rgba(255,255,255,0.14)", backdropFilter: "blur(10px)" }}
         >
-          {icon}
+          <Icon size={20} className="text-[#F6B457]" />
         </div>
         {/* Bottom */}
         <div>

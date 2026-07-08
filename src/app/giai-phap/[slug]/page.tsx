@@ -191,7 +191,7 @@ export default async function SolutionDetailPage({ params }: Props) {
                 key={s.id}
                 title={s.title}
                 description={s.description}
-                icon={s.icon}
+                iconKey={s.id}
                 tags={s.tags}
                 href={`/giai-phap/${s.slug}`}
                 image={s.image}

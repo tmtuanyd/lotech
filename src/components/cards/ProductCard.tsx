@@ -104,7 +104,11 @@ export default function ProductCard({
           <Link
             href="/lien-he"
             className="flex w-full sm:flex-1 items-center justify-center gap-1.5 rounded-xl py-2.5 text-xs font-bold transition-all hover:-translate-y-px"
-            style={{ background: "#0F2A56", color: "white" }}
+            style={{
+              background: "linear-gradient(135deg, #0F2A56 0%, #1E458A 100%)",
+              color: "white",
+              boxShadow: "0 16px 30px -22px rgba(15,42,86,0.85)",
+            }}
           >
             <FileText size={13} />
             <span className="sm:hidden">Báo giá</span>

@@ -42,7 +42,14 @@ export default function ProductsSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.05 });
 
   return (
-    <section ref={ref} className="py-14 sm:py-20 md:py-24 bg-white">
+    <section
+      ref={ref}
+      className="py-14 sm:py-20 md:py-24"
+      style={{
+        background:
+          "linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 44%, #F4F8FE 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* ── Header ── */}
@@ -81,16 +88,20 @@ export default function ProductsSection() {
             >
               <Link
                 href={cat.href}
-                className="group flex items-center gap-3 p-3.5 sm:p-4 rounded-xl border-2 bg-white transition-all duration-200 hover:border-[#0D2B5E] hover:-translate-y-0.5 hover:shadow-md"
-                style={{ borderColor: "#E2E8F0" }}
+                className="group flex items-center gap-3 p-3.5 sm:p-4 rounded-2xl border bg-white transition-all duration-200 hover:border-[#B9CBE4] hover:-translate-y-0.5 hover:shadow-[0_20px_36px_-26px_rgba(15,42,86,0.55)]"
+                style={{
+                  borderColor: "#D8E2F0",
+                  background:
+                    "linear-gradient(180deg, rgba(255,255,255,0.98), rgba(249,252,255,0.96))",
+                }}
               >
                 <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors duration-200 group-hover:bg-[#0D2B5E]"
-                  style={{ background: "#F1F5F9" }}
+                  className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-200 group-hover:bg-[#0D2B5E]"
+                  style={{ background: "#EEF4FD" }}
                 >
                   <cat.icon
                     size={18}
-                    className="transition-colors duration-200"
+                    className="transition-colors duration-200 group-hover:text-white"
                     style={{ color: "#0D2B5E" }}
                   />
                 </div>
@@ -131,13 +142,31 @@ export default function ProductsSection() {
 
         {/* ── Inquiry strip ── */}
         <div
-          className="flex flex-col sm:flex-row items-center gap-4 px-4 sm:px-6 py-5 rounded-2xl"
-          style={{ background: "#0D2B5E" }}
+          className="flex flex-col sm:flex-row items-center gap-4 px-4 sm:px-6 py-5 rounded-[26px]"
+          style={{
+            background:
+              "linear-gradient(128deg, #0A1E42 0%, #0D2B5E 52%, #1C4A96 100%)",
+            boxShadow: "0 30px 48px -30px rgba(10, 30, 66, 0.8)",
+          }}
         >
           <div className="flex-1">
             <div className="font-bold text-white text-sm">Cần báo giá cho nhiều sản phẩm?</div>
             <div className="text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.5)" }}>
               Gửi danh sách sản phẩm và số lượng — nhận báo giá trong 2 giờ
+            </div>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <span
+                className="text-[10px] font-semibold rounded-full px-2.5 py-1"
+                style={{ background: "rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.9)" }}
+              >
+                Tư vấn kỹ thuật miễn phí
+              </span>
+              <span
+                className="text-[10px] font-semibold rounded-full px-2.5 py-1"
+                style={{ background: "rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.9)" }}
+              >
+                Đối tác chính hãng
+              </span>
             </div>
           </div>
           <Link

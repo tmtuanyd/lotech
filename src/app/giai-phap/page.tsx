@@ -43,7 +43,7 @@ export default function SolutionsPage() {
                 key={sol.id}
                 title={sol.title}
                 description={sol.description}
-                icon={sol.icon}
+                iconKey={sol.id}
                 tags={sol.tags}
                 href={`/giai-phap/${sol.slug}`}
                 image={sol.image}

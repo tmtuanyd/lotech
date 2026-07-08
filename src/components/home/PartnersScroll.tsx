@@ -4,7 +4,14 @@ export default function PartnersScroll() {
   const partners = [...PARTNERS, ...PARTNERS];
 
   return (
-    <section className="py-14 bg-white border-t border-b" style={{ borderColor: "#DCE4F0" }}>
+    <section
+      className="py-14 sm:py-16 border-t border-b"
+      style={{
+        borderColor: "#DCE4F0",
+        background:
+          "linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 mb-8 text-center">
         <p className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#7B8FA8" }}>
           Hợp tác với các thương hiệu hàng đầu thế giới
@@ -15,8 +22,13 @@ export default function PartnersScroll() {
           {partners.map((partner, i) => (
             <div
               key={i}
-              className="group flex-shrink-0 rounded-2xl border bg-white px-3 py-2 flex items-center justify-center transition-all"
-              style={{ borderColor: "#DCE4F0", minWidth: "196px", height: "72px" }}
+              className="group flex-shrink-0 rounded-2xl border bg-white px-3 py-2 flex items-center justify-center transition-all hover:-translate-y-0.5"
+              style={{
+                borderColor: "#DCE4F0",
+                minWidth: "196px",
+                height: "72px",
+                boxShadow: "0 16px 28px -24px rgba(15,42,86,0.45)",
+              }}
             >
               {partner.logoUrl ? (
                 <img
