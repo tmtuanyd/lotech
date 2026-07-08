@@ -2,12 +2,8 @@ import Link from "next/link";
 import {
   ArrowRight,
   Cctv,
-  Thermometer,
-  BrickWallShield,
-  Cpu,
-  BatteryCharging,
-  Sun,
 } from "lucide-react";
+import { solutionIconMap } from "@/components/solutions/solutionIconMap";
 
 interface SolutionCardProps {
   title: string;
@@ -18,15 +14,6 @@ interface SolutionCardProps {
   image: string;
 }
 
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
-  "camera-ai": Cctv,
-  "giam-sat-nhiet": Thermometer,
-  "hang-rao": BrickWallShield,
-  "scada-plc": Cpu,
-  "giam-sat-dc": BatteryCharging,
-  solar: Sun,
-};
-
 export default function SolutionCard({
   title,
   description,
@@ -35,7 +22,7 @@ export default function SolutionCard({
   href,
   image,
 }: SolutionCardProps) {
-  const Icon = iconMap[iconKey] ?? Cctv;
+  const Icon = solutionIconMap[iconKey] ?? Cctv;
 
   return (
     <Link

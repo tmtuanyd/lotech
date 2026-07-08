@@ -100,7 +100,7 @@ export default function AboutPage() {
                 .
               </p>
               <a
-                href="/documents/ho-so-nang-luc.pdf"
+                href="/api/download/ho-so-nang-luc"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-white transition-all hover:-translate-y-px"
                 style={{ background: "#0F2A56" }}
               >

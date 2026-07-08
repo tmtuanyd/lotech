@@ -72,7 +72,7 @@ export default async function SolutionDetailPage({ params }: Props) {
               <SectionTitle
                 label="Tổng quan"
                 title="Mô hình triển khai và giá trị vận hành"
-                description="Trang chi tiết được định hướng theo kiểu profile giải pháp doanh nghiệp, để sau này có thể thay bằng nội dung thật và case study."
+                description="Nội dung được tổng hợp theo hồ sơ năng lực LOTEC, tập trung vào năng lực triển khai thực tế và giá trị vận hành."
               />
               <p className="text-base leading-relaxed mb-6" style={{ color: "#7B8FA8" }}>
                 {sol.description} LOTEC cung cấp giải pháp tổng thể từ khảo sát, thiết kế, thi
@@ -108,10 +108,10 @@ export default async function SolutionDetailPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
             {[
-              { icon: ShieldCheck, value: "< 0.5s", label: "Phát hiện xâm nhập" },
-              { icon: BarChart3, value: "99.9%", label: "Uptime hệ thống" },
-              { icon: BadgeCheck, value: "-70%", label: "Giảm chi phí tuần tra" },
-              { icon: ArrowRight, value: "24/7", label: "Hỗ trợ kỹ thuật" },
+              { icon: ShieldCheck, value: "An toàn", label: "Phát hiện sớm bất thường" },
+              { icon: BarChart3, value: "Tin cậy", label: "Vận hành ổn định liên tục" },
+              { icon: BadgeCheck, value: "Hiệu quả", label: "Tối ưu chi phí vận hành" },
+              { icon: ArrowRight, value: "24/7", label: "Theo dõi và hỗ trợ kỹ thuật" },
             ].map((b) => (
               <div
                 key={b.label}

@@ -2,17 +2,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { ArrowRight, Cctv, Thermometer, BrickWallShield, Cpu, BatteryCharging, Sun } from "lucide-react";
+import { ArrowRight, Cctv } from "lucide-react";
 import { SOLUTIONS } from "@/data";
-
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
-  "camera-ai": Cctv,
-  "giam-sat-nhiet": Thermometer,
-  "hang-rao": BrickWallShield,
-  "scada-plc": Cpu,
-  "giam-sat-dc": BatteryCharging,
-  "solar": Sun,
-};
+import { solutionIconMap } from "@/components/solutions/solutionIconMap";
 
 export default function SolutionsGrid() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.06 });
@@ -56,7 +48,7 @@ export default function SolutionsGrid() {
         {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {SOLUTIONS.map((sol, i) => {
-            const Icon = iconMap[sol.id] ?? Cctv;
+            const Icon = solutionIconMap[sol.id] ?? Cctv;
             return (
               <motion.div
                 key={sol.id}

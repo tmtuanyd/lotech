@@ -21,7 +21,7 @@ const slides = [
     title: ["SCADA / PLC", "Tự Động Hóa", "Trạm Biến Áp"],
     subtitle: "IEC 61850 · HMI · Điều khiển từ xa · Dự phòng N+1",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80",
-    cta1: { label: "Xem Giải Pháp", href: "/giai-phap/scada-plc-tu-dong-hoa" },
+    cta1: { label: "Xem Giải Pháp", href: "/giai-phap/nguon-dien-va-tu-dong-hoa" },
     cta2: { label: "Liên Hệ Tư Vấn", href: "/lien-he" },
   },
   {
@@ -29,7 +29,7 @@ const slides = [
     title: ["Điện Năng Lượng", "Mặt Trời", "On-Grid & Hybrid"],
     subtitle: "Solar · Inverter Huawei/SMA · Monitoring online",
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80",
-    cta1: { label: "Xem Giải Pháp", href: "/giai-phap/dien-mat-troi-solar" },
+    cta1: { label: "Xem Giải Pháp", href: "/giai-phap/dien-nang-luong-mat-troi" },
     cta2: { label: "Liên Hệ Tư Vấn", href: "/lien-he" },
   },
 ];

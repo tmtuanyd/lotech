@@ -16,6 +16,7 @@ import {
   BrickWallShield,
   Cpu,
   BatteryCharging,
+  BatteryFull,
   Sun,
   Zap,
   Server,
@@ -24,12 +25,13 @@ import {
 import { COMPANY } from "@/data";
 
 const solutionItems = [
-  { icon: Cctv,             label: "Camera AI & An Ninh",  sub: "Giám sát trạm 24/7",       href: "/giai-phap/camera-ai-an-ninh" },
-  { icon: Thermometer,      label: "Giám Sát Nhiệt",       sub: "Phát hiện điểm nóng",      href: "/giai-phap/giam-sat-nhiet" },
-  { icon: BrickWallShield,  label: "Bảo Vệ Hàng Rào",     sub: "Perimeter 110–500kV",      href: "/giai-phap/bao-ve-hang-rao" },
-  { icon: Cpu,              label: "SCADA / PLC",           sub: "Tự động hóa",              href: "/giai-phap/scada-plc-tu-dong-hoa" },
-  { icon: BatteryCharging,  label: "Giám Sát DC & Ắc Quy", sub: "Nguồn trạm truyền tải",    href: "/giai-phap/giam-sat-dc-ac-quy" },
-  { icon: Sun,              label: "Điện Mặt Trời",         sub: "Solar on-grid",            href: "/giai-phap/dien-mat-troi-solar" },
+  { icon: Cctv,             label: "Giám sát an ninh thông minh",      sub: "Camera AI và điều hành từ xa", href: "/giai-phap/giam-sat-an-ninh-thong-minh" },
+  { icon: Thermometer,      label: "Giám sát nhiệt thiết bị điện",      sub: "Theo dõi online 24/7",        href: "/giai-phap/giam-sat-nhiet-thiet-bi-dien" },
+  { icon: BrickWallShield,  label: "Bảo vệ hàng rào và hành lang trạm", sub: "Cảnh báo xâm nhập",           href: "/giai-phap/bao-ve-hang-rao-hanh-lang-tram-dien" },
+  { icon: Cpu,              label: "Nguồn điện và tự động hóa",         sub: "PLC, SCADA, tủ điện",         href: "/giai-phap/nguon-dien-va-tu-dong-hoa" },
+  { icon: BatteryCharging,  label: "Giám sát tủ điện một chiều (DC)",   sub: "Trạm 110kV - 220kV",          href: "/giai-phap/giam-sat-tu-dien-mot-chieu-dc" },
+  { icon: BatteryFull,      label: "Giám sát nguồn ắc quy",             sub: "Theo dõi từng cell",          href: "/giai-phap/giam-sat-nguon-ac-quy-tram-truyen-tai" },
+  { icon: Sun,              label: "Điện năng lượng mặt trời",           sub: "Thi công trọn gói",          href: "/giai-phap/dien-nang-luong-mat-troi" },
 ];
 
 const productItems = [

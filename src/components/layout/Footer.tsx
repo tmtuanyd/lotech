@@ -66,11 +66,13 @@ export default function Footer() {
             <h4 className="font-bold text-white mb-4 text-sm uppercase tracking-wider">Giải Pháp</h4>
             <ul className="space-y-2.5">
               {[
-                ["Camera AI & An Ninh", "/giai-phap/camera-ai-an-ninh"],
-                ["Giám Sát Nhiệt", "/giai-phap/giam-sat-nhiet"],
-                ["Bảo Vệ Hàng Rào", "/giai-phap/bao-ve-hang-rao"],
-                ["SCADA / PLC", "/giai-phap/scada-plc-tu-dong-hoa"],
-                ["Điện Mặt Trời", "/giai-phap/dien-mat-troi-solar"],
+                ["Giám sát an ninh thông minh", "/giai-phap/giam-sat-an-ninh-thong-minh"],
+                ["Giám sát nhiệt thiết bị điện", "/giai-phap/giam-sat-nhiet-thiet-bi-dien"],
+                ["Bảo vệ hàng rào và hành lang trạm", "/giai-phap/bao-ve-hang-rao-hanh-lang-tram-dien"],
+                ["Nguồn điện và tự động hóa", "/giai-phap/nguon-dien-va-tu-dong-hoa"],
+                ["Giám sát tủ điện một chiều (DC)", "/giai-phap/giam-sat-tu-dien-mot-chieu-dc"],
+                ["Giám sát nguồn ắc quy", "/giai-phap/giam-sat-nguon-ac-quy-tram-truyen-tai"],
+                ["Điện năng lượng mặt trời", "/giai-phap/dien-nang-luong-mat-troi"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link
@@ -145,6 +147,14 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+            <Link
+              href="/api/download/ho-so-nang-luc"
+              className="mt-5 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white transition-colors hover:text-[#0F2A56]"
+              style={{ background: "rgba(232,119,34,0.95)" }}
+            >
+              Tải hồ sơ năng lực
+              <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </div>
