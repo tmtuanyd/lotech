@@ -6,6 +6,7 @@ import ProjectCard from "@/components/cards/ProjectCard";
 import CtaBand from "@/components/home/CtaBand";
 import { PROJECTS } from "@/data";
 import SectionTitle from "@/components/ui/SectionTitle";
+import Reveal from "@/components/common/Reveal";
 
 const filters = ["Tất cả", "220kV", "110kV", "Solar", "Tự động hóa"];
 
@@ -27,7 +28,7 @@ export default function ProjectsPage() {
       />
 
       <section className="py-20" style={{ background: "#F6F8FC" }}>
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-8">
             <SectionTitle
               label="Danh mục dự án"
@@ -81,7 +82,7 @@ export default function ProjectsPage() {
               Không có dự án nào trong danh mục này.
             </div>
           )}
-        </div>
+        </Reveal>
       </section>
 
       <CtaBand />

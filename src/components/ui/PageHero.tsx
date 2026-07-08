@@ -38,12 +38,15 @@ export default function PageHero({ breadcrumb, title, description, image }: Page
       )}
 
       <div
-        className="absolute -top-24 right-0 h-80 w-80 rounded-full opacity-40"
+        className="soft-orb absolute -top-24 right-0 h-80 w-80 rounded-full opacity-40"
         style={{ background: "radial-gradient(circle, rgba(242,141,53,0.22), transparent 70%)" }}
       />
       <div
-        className="absolute inset-0"
-        style={{ background: "radial-gradient(circle at 82% 18%, rgba(34,211,238,0.14), transparent 28%)" }}
+        className="soft-orb absolute inset-0"
+        style={{
+          background: "radial-gradient(circle at 82% 18%, rgba(34,211,238,0.14), transparent 28%)",
+          animationDelay: "1.2s",
+        }}
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-18 md:py-24">

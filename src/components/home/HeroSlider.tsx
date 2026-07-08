@@ -74,7 +74,7 @@ export default function HeroSlider() {
             {/* Content */}
             <div className="relative z-10 h-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center">
               <div
-                className="max-w-[620px] rounded-[28px] px-5 py-6 sm:px-7 sm:py-7"
+                className="max-w-[760px] rounded-[28px] px-5 py-6 sm:px-7 sm:py-7"
                 style={{
                   background: "linear-gradient(180deg, rgba(255,255,255,0.26), rgba(255,255,255,0.14))",
                   border: "1px solid rgba(255,255,255,0.24)",
@@ -99,7 +99,7 @@ export default function HeroSlider() {
                 {/* Headline */}
                 <h1
                   className="font-black leading-[1.03] mb-4 tracking-tight"
-                  style={{ fontSize: "clamp(1.9rem, 4.3vw, 4.2rem)", color: "white" }}
+                  style={{ fontSize: "clamp(1.9rem, 4vw, 4.35rem)", color: "white" }}
                 >
                   {slide.title.map((line, li) => (
                     <span key={li} className="block">

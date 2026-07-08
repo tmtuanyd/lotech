@@ -3,6 +3,7 @@ import { BadgeCheck, FileText, Leaf, Lightbulb, ShieldCheck } from "lucide-react
 import PageHero from "@/components/ui/PageHero";
 import SectionTitle from "@/components/ui/SectionTitle";
 import CtaBand from "@/components/home/CtaBand";
+import Reveal from "@/components/common/Reveal";
 import { COMPANY, PARTNERS } from "@/data";
 
 export const metadata: Metadata = {
@@ -61,7 +62,7 @@ export default function AboutPage() {
 
       {/* Overview */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative overflow-hidden rounded-[30px] modern-card p-2">
               <div className="relative overflow-hidden rounded-[24px]" style={{ aspectRatio: "4/3" }}>
@@ -108,12 +109,12 @@ export default function AboutPage() {
               </a>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Stats */}
       <section style={{ background: "linear-gradient(135deg, #08142F 0%, #0F2A56 60%, #1B3F7A 100%)" }}>
-        <div className="max-w-7xl mx-auto px-4 py-12">
+        <Reveal className="max-w-7xl mx-auto px-4 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((s) => (
               <div key={s.label}>
@@ -122,12 +123,12 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Core values */}
       <section className="py-20" style={{ background: "#F6F8FC" }}>
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <SectionTitle
             label="Giá trị cốt lõi"
             title="Phương Châm Hoạt Động"
@@ -158,12 +159,12 @@ export default function AboutPage() {
               );
             })}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Certifications & Partners */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-14">
             <div>
               <SectionTitle label="Chứng nhận" title="Tiêu Chuẩn & Chứng Chỉ" />
@@ -205,7 +206,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <CtaBand />

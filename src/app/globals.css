@@ -94,6 +94,17 @@ a {
 .marquee-track { animation: marquee 35s linear infinite; }
 .marquee-track:hover { animation-play-state: paused; }
 
+@keyframes float-y {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(242, 141, 53, 0.24); }
+  50% { box-shadow: 0 0 0 10px rgba(242, 141, 53, 0); }
+}
+
+
 /* ─── Section label ──────────────────────────── */
 .section-label {
   display: inline-flex;
@@ -149,10 +160,26 @@ a {
 }
 
 .modern-card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1rem;
   box-shadow: 0 16px 35px -24px rgba(15, 42, 86, 0.34);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.modern-card:hover {
+  transform: translateY(-4px);
+  border-color: #c9d8eb;
+  box-shadow: 0 24px 48px -30px rgba(15, 42, 86, 0.45);
+}
+
+.soft-orb {
+  animation: float-y 5s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2.4s ease-in-out infinite;
 }
 
 .section-shell {

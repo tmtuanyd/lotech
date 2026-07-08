@@ -10,12 +10,12 @@ export default function CtaBand() {
     >
       {/* Geometric decoration */}
       <div
-        className="absolute -top-40 -right-40 w-96 h-96 rounded-full pointer-events-none"
+        className="soft-orb absolute -top-40 -right-40 w-96 h-96 rounded-full pointer-events-none"
         style={{ background: "radial-gradient(circle, rgba(232,119,34,0.12), transparent 70%)" }}
       />
       <div
-        className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(26,68,144,0.5), transparent 70%)" }}
+        className="soft-orb absolute -bottom-40 -left-40 w-80 h-80 rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(circle, rgba(26,68,144,0.5), transparent 70%)", animationDelay: "1s" }}
       />
       {/* Top accent line */}
       <div
@@ -54,7 +54,7 @@ export default function CtaBand() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
           <Link
             href={`tel:${COMPANY.hotline1.replace(/\s/g, "")}`}
-            className="flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
+            className="pulse-glow flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
             style={{ background: "#E87722", boxShadow: "0 4px 14px rgba(232,119,34,0.35)" }}
           >
             <Phone size={16} />

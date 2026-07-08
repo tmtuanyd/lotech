@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import ProductCard from "@/components/cards/ProductCard";
 import CtaBand from "@/components/home/CtaBand";
+import Reveal from "@/components/common/Reveal";
 import { PRODUCTS } from "@/data";
 import { Cctv, Zap, Server, LayoutGrid, Factory, Wrench } from "lucide-react";
 import Link from "next/link";
@@ -33,7 +34,7 @@ export default function ProductsPage() {
 
       {/* Search bar */}
       <div className="py-6 border-b" style={{ borderColor: "#DCE4F0", background: "white" }}>
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <div className="flex gap-3">
             <input
               type="text"
@@ -59,12 +60,12 @@ export default function ProductsPage() {
               </span>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
 
       {/* Categories */}
       <section className="py-14" style={{ background: "#F4F7FB" }}>
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <h2 className="text-xl font-extrabold mb-6" style={{ color: "#0D2B5E" }}>
             Danh Mục Sản Phẩm
           </h2>
@@ -94,12 +95,12 @@ export default function ProductsPage() {
               </Link>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Products grid */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-extrabold" style={{ color: "#0D2B5E" }}>
               Sản Phẩm Nổi Bật
@@ -122,7 +123,7 @@ export default function ProductsPage() {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <CtaBand />

@@ -113,7 +113,11 @@ export default async function SolutionDetailPage({ params }: Props) {
               { icon: BadgeCheck, value: "-70%", label: "Giảm chi phí tuần tra" },
               { icon: ArrowRight, value: "24/7", label: "Hỗ trợ kỹ thuật" },
             ].map((b) => (
-              <div key={b.label} className="modern-card p-5" style={{ background: "rgba(255,255,255,0.06)", borderColor: "rgba(255,255,255,0.1)" }}>
+              <div
+                key={b.label}
+                className="rounded-2xl border p-5 transition-transform duration-300 hover:-translate-y-0.5"
+                style={{ background: "rgba(255,255,255,0.06)", borderColor: "rgba(255,255,255,0.12)" }}
+              >
                 <div className="mb-3 flex justify-center text-white/80">
                   <b.icon size={18} />
                 </div>

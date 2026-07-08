@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, MessageCircle, ArrowRight } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import ContactForm from "@/components/forms/ContactForm";
 import SectionTitle from "@/components/ui/SectionTitle";
+import Reveal from "@/components/common/Reveal";
 import { COMPANY } from "@/data";
 
 export const metadata: Metadata = {
@@ -46,7 +47,7 @@ export default function ContactPage() {
 
       {/* Quick contact cards */}
       <section className="py-16" style={{ background: "#F6F8FC" }}>
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <SectionTitle
             label="Liên hệ nhanh"
             title="Chọn kênh phù hợp để bắt đầu"
@@ -87,12 +88,12 @@ export default function ContactPage() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Form + Map */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-5 gap-10">
             {/* Form */}
             <div className="lg:col-span-3">
@@ -180,7 +181,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

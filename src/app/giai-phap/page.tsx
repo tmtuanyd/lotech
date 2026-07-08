@@ -3,6 +3,7 @@ import PageHero from "@/components/ui/PageHero";
 import SolutionCard from "@/components/cards/SolutionCard";
 import CtaBand from "@/components/home/CtaBand";
 import SectionTitle from "@/components/ui/SectionTitle";
+import Reveal from "@/components/common/Reveal";
 import { SOLUTIONS } from "@/data";
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function SolutionsPage() {
       />
 
       <section className="py-20" style={{ background: "#F6F8FC" }}>
-        <div className="max-w-7xl mx-auto px-4">
+        <Reveal className="max-w-7xl mx-auto px-4">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <SectionTitle
               label="Danh mục giải pháp"
@@ -49,7 +50,7 @@ export default function SolutionsPage() {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <CtaBand />
