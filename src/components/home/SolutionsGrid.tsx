@@ -82,8 +82,7 @@ export default function SolutionsGrid() {
                   >
                     <Icon
                       size={22}
-                      className="transition-colors duration-300"
-                      style={{ color: "#F5A623" }}
+                      className="transition-colors duration-300 text-[#F5A623]"
                     />
                   </div>
 

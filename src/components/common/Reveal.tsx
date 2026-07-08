@@ -8,6 +8,7 @@ interface RevealProps {
   delay?: number;
   y?: number;
   className?: string;
+  id?: string;
 }
 
 export default function Reveal({
@@ -15,9 +16,11 @@ export default function Reveal({
   delay = 0,
   y = 20,
   className,
+  id,
 }: RevealProps) {
   return (
     <motion.div
+      id={id}
       className={className}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
