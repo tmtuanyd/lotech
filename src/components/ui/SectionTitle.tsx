@@ -31,7 +31,9 @@ export default function SectionTitle({
       </h2>
       {description && (
         <p
-          className="mt-3 text-base leading-relaxed max-w-2xl"
+          className={`mt-3 text-base leading-relaxed max-w-2xl ${
+            align === "center" ? "mx-auto" : ""
+          }`}
           style={{ color: dark ? "rgba(255,255,255,0.68)" : "var(--text-muted)" }}
         >
           {description}

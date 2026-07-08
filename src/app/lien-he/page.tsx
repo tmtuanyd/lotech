@@ -48,38 +48,45 @@ export default function ContactPage() {
       {/* Quick contact cards */}
       <section className="py-16" style={{ background: "#F6F8FC" }}>
         <Reveal className="max-w-7xl mx-auto px-4">
-          <SectionTitle
-            label="Liên hệ nhanh"
-            title="Chọn kênh phù hợp để bắt đầu"
-            description="Mỗi kênh liên hệ được bố trí rõ ràng để phù hợp tư vấn nhanh, gửi tài liệu và báo giá B2B."
-            align="center"
-          />
-          <div className="grid md:grid-cols-3 gap-5 mt-10">
+          <div className="mx-auto max-w-3xl text-center">
+            <SectionTitle
+              label="Liên hệ nhanh"
+              title="Chọn kênh phù hợp để bắt đầu"
+              description="Mỗi kênh liên hệ được bố trí rõ ràng để phù hợp tư vấn nhanh, gửi tài liệu và báo giá B2B."
+              align="center"
+            />
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
             {contactCards.map((card) => (
               <div
                 key={card.title}
-                className="modern-card flex flex-col items-center gap-3 rounded-[26px] p-7 text-center"
+                className="modern-card flex min-h-[248px] flex-col items-center rounded-[26px] p-6 text-center"
                 style={{ borderColor: "#DCE4F0" }}
               >
                 <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center"
+                  className="mb-3 h-14 w-14 rounded-2xl flex items-center justify-center"
                   style={{ background: `${card.color}14` }}
                 >
                   <card.icon size={24} style={{ color: card.color }} />
                 </div>
-                <h3 className="font-bold text-lg" style={{ color: "#0F2A56" }}>
+
+                <h3 className="min-h-[32px] text-lg font-bold leading-tight" style={{ color: "#0F2A56" }}>
                   {card.title}
                 </h3>
-                {card.lines.map((l) => (
-                  <p key={l} className="text-sm" style={{ color: "#6B7C93" }}>
-                    {l}
-                  </p>
-                ))}
+
+                <div className="mt-3 flex min-h-[62px] flex-col items-center justify-center gap-1">
+                  {card.lines.map((l) => (
+                    <p key={l} className="text-sm leading-relaxed" style={{ color: "#6B7C93" }}>
+                      {l}
+                    </p>
+                  ))}
+                </div>
+
                 <a
                   href={card.cta.href}
                   target={card.cta.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white transition-all hover:-translate-y-px"
+                  className="mt-auto inline-flex min-w-[126px] items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white transition-all hover:-translate-y-px"
                   style={{ background: card.color }}
                 >
                   {card.cta.label}
