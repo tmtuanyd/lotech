@@ -84,8 +84,8 @@ export default function ProductsPage() {
       </section>
 
       {/* Products by category */}
-      <section className="py-16" style={{ background: "#F6F8FC" }}>
-        <div className="max-w-7xl mx-auto px-4 space-y-14">
+      <section className="py-14 sm:py-16" style={{ background: "#F6F8FC" }}>
+        <div className="max-w-7xl mx-auto px-4 space-y-12 sm:space-y-14">
           {categoriesWithProducts.map((cat) => (
             <Reveal key={cat.slug} id={`danh-muc-${cat.slug}`}>
               <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
@@ -97,7 +97,7 @@ export default function ProductsPage() {
                     >
                       <cat.Icon size={18} style={{ color: "#0D2B5E" }} />
                     </div>
-                    <h2 className="text-2xl font-extrabold tracking-tight" style={{ color: "#0F2A56" }}>
+                    <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight" style={{ color: "#0F2A56" }}>
                       {cat.label}
                     </h2>
                   </div>
@@ -132,10 +132,7 @@ export default function ProductsPage() {
                   ))}
                 </div>
               ) : (
-                <div
-                  className="rounded-[24px] border bg-white px-6 py-10 text-center"
-                  style={{ borderColor: "#DCE4F0" }}
-                >
+                <div className="rounded-[24px] border bg-white px-4 sm:px-6 py-8 sm:py-10 text-center" style={{ borderColor: "#DCE4F0" }}>
                   <p className="text-sm mb-4" style={{ color: "#6B7C93" }}>
                     Danh mục đang được cập nhật sản phẩm. Liên hệ để nhận tư vấn và báo giá nhanh.
                   </p>

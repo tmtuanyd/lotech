@@ -46,7 +46,7 @@ export default function ProductCard({
 
         <div className="absolute left-2.5 right-2.5 top-2.5 sm:left-3.5 sm:right-3.5 sm:top-3.5 flex items-start justify-between gap-2">
           <span
-            className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] font-bold uppercase tracking-[0.08em] sm:tracking-[0.16em]"
+            className="inline-flex max-w-[70%] items-center gap-1 sm:gap-1.5 rounded-full px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] font-bold uppercase tracking-[0.08em] sm:tracking-[0.16em]"
             style={{
               background: "rgba(255,255,255,0.92)",
               color: "#0F2A56",
@@ -54,7 +54,7 @@ export default function ProductCard({
             }}
           >
             <Building2 size={11} className="hidden sm:block" />
-            {brand}
+            <span className="truncate">{brand}</span>
           </span>
           {badge && badge !== "LIÊN HỆ" && (
             <span
@@ -80,10 +80,7 @@ export default function ProductCard({
           </h3>
         </Link>
 
-        <div
-          className="mb-3 flex items-center justify-between gap-2 text-[11px] sm:text-[11px]"
-          style={{ color: "#7B8FA8" }}
-        >
+        <div className="mb-3 flex flex-col gap-1.5 text-[11px] sm:flex-row sm:items-center sm:justify-between sm:gap-2" style={{ color: "#7B8FA8" }}>
           <span
             className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-semibold"
             style={{ background: "#EEF4FB", color: "#0F2A56" }}
@@ -103,10 +100,10 @@ export default function ProductCard({
           </div>
         </div>
 
-        <div className="mt-auto flex gap-2">
+        <div className="mt-auto flex flex-col sm:flex-row gap-2">
           <Link
             href="/lien-he"
-            className="flex flex-1 items-center justify-center gap-1.5 rounded-xl py-2.5 text-xs font-bold transition-all hover:-translate-y-px"
+            className="flex w-full sm:flex-1 items-center justify-center gap-1.5 rounded-xl py-2.5 text-xs font-bold transition-all hover:-translate-y-px"
             style={{ background: "#0F2A56", color: "white" }}
           >
             <FileText size={13} />
@@ -115,10 +112,11 @@ export default function ProductCard({
           </Link>
           <Link
             href={href}
-            className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border transition-all hover:bg-[#EEF4FB] hover:border-[#C9D8EB]"
+            className="flex h-10 w-full sm:w-10 flex-shrink-0 items-center justify-center gap-1.5 rounded-xl border transition-all hover:bg-[#EEF4FB] hover:border-[#C9D8EB]"
             style={{ borderColor: "#DCE4F0", color: "#0F2A56" }}
           >
             <ArrowRight size={15} />
+            <span className="sm:hidden text-xs font-bold">Chi tiết</span>
           </Link>
         </div>
       </div>

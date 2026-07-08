@@ -96,22 +96,22 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             </div>
 
             <div>
-              <div className="flex flex-wrap items-center gap-3 mb-4">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-4">
                 <span
-                  className="rounded-full px-3 py-1 text-xs font-black uppercase"
+                  className="rounded-full px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-black uppercase"
                   style={{ background: "#EEF4FB", color: "#0F2A56" }}
                 >
                   {product.brand}
                 </span>
                 <span
-                  className="rounded-full px-3 py-1 text-xs font-semibold"
+                  className="rounded-full px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-semibold max-w-full truncate"
                   style={{ background: "#FFF3E8", color: "#F28D35" }}
                 >
                   Mã: {product.code}
                 </span>
                 {product.badge && (
                   <span
-                    className="rounded-full px-3 py-1 text-xs font-black uppercase text-white"
+                    className="rounded-full px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-black uppercase text-white"
                     style={{ background: "#F28D35" }}
                   >
                     {product.badge}
@@ -182,10 +182,10 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2.5 sm:gap-3">
                   <Link
                     href="/lien-he"
-                    className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white"
+                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold text-white"
                     style={{ background: "#0F2A56" }}
                   >
                     <FileText size={16} />
@@ -193,7 +193,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                   </Link>
                   <Link
                     href={`tel:0945225884`}
-                    className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-bold"
+                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold"
                     style={{ background: "#FFF3E8", color: "#F28D35" }}
                   >
                     <Truck size={16} />
